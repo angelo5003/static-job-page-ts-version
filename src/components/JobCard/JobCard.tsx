@@ -26,23 +26,26 @@ const JobCard: React.FC<JobCardProps> = ({ jobData }) => {
       <div className="img-container">
         <img src={jobData.logo} className="img" alt="company-logo" />
       </div>
-      <div className="job-info-container">
-        <p>{jobData.company}</p>
-        <p>{jobData.new}</p>
-        <p>{jobData.featured}</p>
-      </div>
+      <ul className="job-info-container">
+        <li>{jobData.company}</li>
+        <li>{jobData.new ? "new".toUpperCase() : null}</li>
+        <li>{jobData.featured ? "featured".toUpperCase() : null}</li>
+      </ul>
       <p>{jobData.position}</p>
-      <div className="job-specification-container">
-        <p>{jobData.postedAt}</p>
-        <p>{jobData.contract}</p>
-        <p>{jobData.location}</p>
-      </div>
+      <ul className="job-specification-container">
+        <li>{jobData.postedAt}</li>
+        <li>{jobData.contract}</li>
+        <li>{jobData.location}</li>
+      </ul>
       <div className="job-tags-container">
         <p>{jobData.role}</p>
         <p>{jobData.level}</p>
-        {/* <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p> */}
+        {jobData.languages.map((lang) => {
+          return <li key={lang}>{lang}</li>;
+        })}
+        {jobData.tools.map((tool) => {
+          return <li key={tool}>{tool}</li>;
+        })}
       </div>
     </section>
   );

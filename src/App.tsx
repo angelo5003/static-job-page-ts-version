@@ -2,6 +2,7 @@ import JobCard from "./components/JobCard/JobCard";
 import data from "./data/data.json";
 
 function App() {
+  console.log(`data:`, data);
   return (
     <>
       {Array.isArray(data) ? (
