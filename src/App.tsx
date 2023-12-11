@@ -6,7 +6,7 @@ function App() {
     <>
       {Array.isArray(data) ? (
         data.map((jobData) => {
-          return <JobCard key={jobData.id} />;
+          return <JobCard key={jobData.id} jobData={jobData} />;
         })
       ) : (
         <div>Oops there went something wrong</div>
