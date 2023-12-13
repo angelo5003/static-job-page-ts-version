@@ -1,68 +1,75 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: hsl(185, 58%, 96%);
+}
+
+.header-background-image-container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header-background {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 9.75rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.filter-container {
+  margin: 0 auto;
+  width: 18.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.31rem;
+  box-shadow: 0rem 0.62rem 0.31rem 0rem rgba(0, 0, 0, 0.15);
+}
+
+.filter-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style-type: none;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.31rem;
+}
+
+.clear-btn {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: none;
+  background: none;
+  font-size: 1.12em;
+  color: #818a89;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.filter-items {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 0.62rem;
+  font-size: 1.12em;
+  font-weight: 700;
+  border-radius: 0.31rem;
+}
+
+@media screen and (min-width: 23.5rem) {
+  .header-background {
+    background-image: url("/assets/images/bg-header-desktop.svg");
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 23.43rem) {
+  .header-background {
+    background-image: url("/assets/images/bg-header-mobile.svg");
   }
 }

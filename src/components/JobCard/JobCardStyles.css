@@ -1,0 +1,117 @@
+.card-header-info,
+.card-job-details,
+.card-job-work-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 16rem;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-container {
+  border-left: 0.3rem solid hsl(180, 29%, 50%);
+  padding: 1.25rem;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px hsl(171deg 10% 80%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 23.43rem) {
+  /* .card-header-info,
+  .card-job-details,
+  .card-job-work-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16rem;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+  } */
+  .card-outer-container {
+    display: flex;
+    justify-content: center;
+    margin: 3.12rem;
+  }
+
+  .card-container {
+    width: 23.43rem;
+  }
+}
+
+@media screen and (min-width: 23.5rem) {
+  .card-outer-container {
+    margin: 3.12rem;
+  }
+
+  /* .card-container {
+    border-left: 0.3rem solid hsl(180, 29%, 50%);
+    padding: 1.25rem;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px hsl(171deg 10% 80%);
+    background-color: hsl(0, 0%, 100%);
+  } */
+}
+
+/* .card-outer-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.12rem;
+} */
+
+/* .card-container {
+  width: 23.43rem;
+  border-left: 0.3rem solid hsl(180, 29%, 50%);
+  padding: 1.25rem;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px hsl(171deg 10% 80%);
+  background-color: hsl(0, 0%, 100%);
+} */
+
+.card-company-logo {
+  width: 50px;
+}
+
+.card-company-name {
+  color: hsl(180, 29%, 50%);
+  font-size: 1.1em;
+}
+
+.card-new-tag {
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.75rem;
+  border-radius: 1.12rem;
+  color: hsl(180, 31%, 95%);
+}
+
+.card-featured-tag {
+  background-color: hsl(180, 14%, 20%);
+  padding: 0.75rem;
+  border-radius: 1.12rem;
+  color: hsl(180, 31%, 95%);
+}
+
+.card-job-position {
+  color: hsl(180, 14%, 20%);
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.job-details {
+  color: hsl(180, 3%, 70%);
+}
+
+.job-info {
+  padding: 0.35rem;
+  background-color: hsl(180, 31%, 95%);
+  margin: 0.31rem;
+  border-radius: 0.12rem;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.12em;
+}
