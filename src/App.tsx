@@ -21,28 +21,33 @@ function App() {
     }
   };
 
-  // const filteredJobs = data.filter((jobData) => {
-  //   // Check if any of the selected tags are present in languages or tools or role or level
-  //   return selectedTags.some(
-  //     // Using the some method to iterate through selectedTags
-  //     // The some method returns true if the condition is met for at least one tag
-  //     (tag) =>
-  //       jobData.languages.includes(tag) ||
-  //       jobData.tools.includes(tag) ||
-  //       jobData.role.includes(tag) ||
-  //       jobData.level.includes(tag) ||
-  //       // If there are no selected tags (length of selectedTags is zero), return the entire array and show all the items on the DOM
-  //       selectedTags.length === 0
-  //   );
-  // });
+  const filteredJobs = data.filter((jobData) => {
+    // If there are no selected tags (length of selectedTags is zero), return the entire array and show all the items on the DOM
+    if (selectedTags.length === 0) {
+      return true;
+    }
+    // Check if any of the selected tags are present in languages or tools or role or level
+    return selectedTags.some(
+      // Using the some method to iterate through selectedTags
+      // The some method returns true if the condition is met for at least one tag
+      (tag) =>
+        jobData.languages.includes(tag) ||
+        jobData.tools.includes(tag) ||
+        jobData.role.includes(tag) ||
+        jobData.level.includes(tag) ||
+        // If there are no selected tags (length of selectedTags is zero), return the entire array and show all the items on the DOM
+        selectedTags.length === 0
+    );
+  });
 
   return (
     <>
       <header className="header-background-image-container">
         <img className="header-background" />
       </header>
-      {Array.isArray(data) ? (
-        data.map((jobData) => {
+
+      {Array.isArray(filteredJobs) ? (
+        filteredJobs.map((jobData) => {
           return (
             <JobCard
               key={jobData.id}
